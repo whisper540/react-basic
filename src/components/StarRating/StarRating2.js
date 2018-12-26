@@ -1,6 +1,7 @@
 import React from 'react';
 import Star from '../Star/Star.js';
 import './StarRating.css';
+import PropTypes from 'prop-types';
 
 const StarRating = ({ starsSelected = 0, totalStars = 5, onRate = f=>f }) =>
     <div className="star-rating">
@@ -9,5 +10,13 @@ const StarRating = ({ starsSelected = 0, totalStars = 5, onRate = f=>f }) =>
         })}
         <p>{starsSelected} of {totalStars} stars</p>
     </div>;
+
+
+StarRating.propTypes = {
+    totalStars: PropTypes.number
+};
+StarRating.defaultProps = {
+    totalStars: 5
+};
 
 export default StarRating;

@@ -7,7 +7,7 @@
     background-color: grey;
     clip-path: polygon(
         50% 0%,
-        63% 28%,
+        63% 38%,
         100% 38%,
         69% 59%,
         82% 100%,
@@ -18,7 +18,7 @@
         37% 38%
 
     );
-    .start.selected {
-        background-color: red;
-    }
+}
+.star.selected {
+    background-color: red;
 }

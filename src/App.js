@@ -7,7 +7,14 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            colors: []
+            colors: [
+                {
+                    "id": "540",
+                    "title": "god purple",
+                    "color": "#26ac56",
+                    "rating": 5
+                }
+            ]
         };
         this.addColor = this.addColor.bind(this);
         this.rateColor = this.rateColor.bind(this);

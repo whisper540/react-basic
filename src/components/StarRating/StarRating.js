@@ -6,7 +6,7 @@ class StarRating extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            starsSelected: 0
+            starsSelected: props.starsSelected || 0
         };
         this.change = this.change.bind(this);
     }
@@ -18,12 +18,12 @@ class StarRating extends Component {
         totalStars: 5
     };
 
-    componentWillMount() {
-        const { starsSelected } = this.props;
-        if(starsSelected) {
-            this.setState({ starsSelected: starsSelected || 0 });
-        }
-    }
+    // componentWillMount() {
+    //     const { starsSelected } = this.props;
+    //     if(starsSelected) {
+    //         this.setState({ starsSelected: starsSelected || 0 });
+    //     }
+    // }
 
     change(starsSelected) {
         alert(starsSelected);

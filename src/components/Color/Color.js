@@ -9,7 +9,7 @@ const Color = ({ title='default', color, rating=0, onRemove=f=>f, onRate=f=>f })
             <button onClick={ onRemove } className="closeX">x</button>
             <div className="color" style={{ backgroundColor: color }}></div>
             <div>
-                <StarRating starSelected={rating} onRate={ onRate }/>
+                <StarRating starsSelected={rating} onRate={ onRate }/>
             </div>
         </section>
     );
