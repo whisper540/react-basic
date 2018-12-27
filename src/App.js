@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import AddColorForm from './components/AddColorForm/AddColorForm2.js';
 import ColorList from './components/ColorList/ColorList.js';
+import HiddenMessages from './components/HiddenMessages/HiddenMessages.js';
 
 class App extends Component {
     constructor(props) {
@@ -9,10 +10,28 @@ class App extends Component {
         this.state ={
             colors: [
                 {
-                    "id": "540",
-                    "title": "god purple",
-                    "color": "#26ac56",
+                    "id": "541",
+                    "title": "Ocean Blue",
+                    "color": "blue",
                     "rating": 5
+                },
+                {
+                    "id": "542",
+                    "title": "Tomato",
+                    "color": "red",
+                    "rating": 3
+                },
+                {
+                    "id": "543",
+                    "title": "Lawn",
+                    "color": "green",
+                    "rating": 4
+                },
+                {
+                    "id": "544",
+                    "title": "Party Pink",
+                    "color": "pink",
+                    "rating": 3
                 }
             ]
         };
@@ -49,6 +68,7 @@ class App extends Component {
     const { colors } = this.state;
     return (
       <div className="App">
+        <HiddenMessages />
         <AddColorForm onNewColor={ addColor }/>
         <ColorList colors={ colors } onRate={rateColor} onRemove={removeColor}/>
       </div>
