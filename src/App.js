@@ -3,6 +3,8 @@ import './App.css';
 import AddColorForm from './components/AddColorForm/AddColorForm2.js';
 import ColorList from './components/ColorList/ColorList.js';
 import HiddenMessages from './components/HiddenMessages/HiddenMessages.js';
+import { WhenTruthy, WhenFalsy, Display } from './components/Display/Display.js';
+import CountryList from './components/CountryList/CountryList.js';
 
 class App extends Component {
     constructor(props) {
@@ -66,9 +68,22 @@ class App extends Component {
     render() {
     const { addColor, rateColor, removeColor } = this;
     const { colors } = this.state;
+    const age = 19;
     return (
       <div className="App">
+        <Display ifTruthy={age >= 21} >
+            <WhenTruthy>
+                <h1>You can Enter.</h1>
+            </WhenTruthy>
+            <WhenFalsy>
+                <h1>Beat it Kid</h1>
+            </WhenFalsy>
+        </Display>
+
         <HiddenMessages />
+
+        <CountryList />
+
         <AddColorForm onNewColor={ addColor }/>
         <ColorList colors={ colors } onRate={rateColor} onRemove={removeColor}/>
       </div>
